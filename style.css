@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  font-size: 18px;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --dark-blue: hsl(229, 23%, 23%);
+  --dark-gray-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+body {
+  background-color: var(--dark-cyan);
+}
+
+/****CONTAINER****/
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 450px;
+  width: 400px;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/****CARD****/
+.card {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 75% 25%;
+}
+
+/****CARD-UPPER****/
+.card__upper {
+}
+
+/****CARD-LOWER****/
+.card__lower {
+  border-top: 1px solid var(--dark-gray);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.lower__box {
+  display: flex;
+  flex-direction: column;
+}
+
+.lower__box--top {
+  font-weight: 700;
+  text-align: center;
+}
+
+.lower__box--bot {
+  color: var(--dark-gray);
+  font-size: 0.9em;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 400;
+}
