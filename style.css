@@ -12,7 +12,26 @@
 }
 
 body {
-  background-color: var(--dark-cyan);
+  background: var(--dark-cyan);
+}
+
+body img {
+  position: absolute;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.background__image--top {
+  top: -55%;
+}
+
+.background__image--bot {
+  top: 55%;
+  left: 50%;
 }
 
 /****CONTAINER****/
@@ -38,6 +57,49 @@ body {
 
 /****CARD-UPPER****/
 .card__upper {
+  display: grid;
+  grid-template-rows: 0 50% 50%;
+}
+
+.upper--top {
+  background-image: url("images/bg-pattern-card.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.upper--mid {
+  position: relative;
+  margin: 28% auto;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: red;
+  border: 5px solid white;
+  background-image: url("images/image-victor.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.upper--bot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.upper--bot__name {
+  font-weight: 700;
+  margin: 40px 0 10px 0;
+}
+
+.upper--bot__age {
+  color: var(--dark-gray);
+  padding-left: 5px;
+}
+
+.upper--bot__city {
+  font-size: 0.9em;
+  color: var(--dark-gray-blue);
 }
 
 /****CARD-LOWER****/
@@ -61,7 +123,7 @@ body {
 
 .lower__box--bot {
   color: var(--dark-gray);
-  font-size: 0.9em;
+  font-size: 0.8em;
   text-align: center;
   margin-top: 10px;
   font-weight: 400;
